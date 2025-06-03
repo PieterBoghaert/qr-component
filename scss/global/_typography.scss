@@ -1,0 +1,75 @@
+@use "../util/" as u;
+
+@layer typography {
+  /* outfit-regular - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: "Outfit";
+    font-style: normal;
+    font-weight: 400;
+    src: url("./../../assets/fonts/outfit-v12-latin-regular.woff2")
+      format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* outfit-700 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: "Outfit";
+    font-style: normal;
+    font-weight: 700;
+    src: url("./../../assets/fonts/outfit-v12-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+
+  :root {
+    --fs-22: calc(22 / 16 * 1rem);
+    --fs-16: 1rem;
+    --fs-15: calc(15 / 16 * 1rem);
+
+    --font-size-h1: var(--fs-22);
+    --font-size-p: var(--fs-15);
+
+    --font-default: "Outfit", sans-serif;
+  }
+
+  body {
+    font-size: var(--font-size-p);
+    font-family: var(--font-default);
+    font-weight: 400;
+    line-height: 1.4;
+  }
+
+  p {
+    font-size: var(--fs-15);
+    letter-spacing: 0.2px;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    margin: 0;
+    text-wrap: balance;
+    line-height: normal;
+  }
+
+  h1,
+  .h1 {
+    font-size: var(--font-size-h1);
+    font-weight: 700;
+    color: var(--c-slate-900);
+    line-height: 1.2;
+  }
+
+  p {
+    max-inline-size: 50ch;
+  }
+
+  a {
+    text-decoration: none;
+    color: var(--c-slate-500);
+  }
+
+  .attribution {
+    font-weight: 400;
+  }
+}
